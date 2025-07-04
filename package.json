@@ -1,0 +1,32 @@
+{
+  "name": "homeapi",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "env-var": "^7.5.0",
+    "express": "^5.1.0",
+    "module-alias": "^2.2.3",
+    "pg": "^8.16.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.25"
+  }
+}
