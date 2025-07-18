@@ -1,14 +1,15 @@
 import { DataSource } from "typeorm"
+import enviroment from "../config/enviroment"
 
 export default new DataSource({
     type: "postgres",
-    host: "localhost",
-    port: 5432,
-    username: "odoo",
-    password: "odoo",
-    database: "odoo-test",
-    entities: ["src/entities/*.ts"],
-    migrations: ["src/migrations/*.ts"],
+    host: enviroment.HOST,
+    port: enviroment.DATABASE_PORT,
+    username: enviroment.USERNAME,
+    password: enviroment.PASSWORD,
+    database: enviroment.DATABASE,
+    entities: [enviroment.NODE_ENV === "development" ? "src/entities/*.ts" : "entities/*.js"],
+    migrations: [enviroment.NODE_ENV === "development" ? "src/migrations/*.ts" : "migrations/*.js"],
     migrationsTableName: "migrations"
 
 })

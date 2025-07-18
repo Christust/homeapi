@@ -1,5 +1,5 @@
 import express from "express";
-import chefs from "./chefs";
+import chefs from "./chefs.router";
 
 // Main router
 const router = express.Router();
